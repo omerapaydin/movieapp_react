@@ -1,8 +1,8 @@
-export default function WatchListButton({ movies, onSetsWatchListOpen }) {
+export default function WatchListButton({ movies, onSetIsWatchListOpen }) {
   return (
     <div className="mb-2 mb-lg-0 ms-1">
       <button
-        onClick={() => onSetsWatchListOpen((prevState) => !prevState)}
+        onClick={() => onSetIsWatchListOpen((prevState) => !prevState)}
         type="button"
         className="btn btn-outline-light position-relative"
       >

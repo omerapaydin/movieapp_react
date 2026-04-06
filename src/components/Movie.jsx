@@ -1,4 +1,4 @@
-export default function Movie({ movieObj }) {
+export default function Movie({ movieObj, onAddToList }) {
   return (
     <div className="col">
       {movieObj.is_active && (
@@ -12,6 +12,12 @@ export default function Movie({ movieObj }) {
                 New
               </span>
             )}
+            <button
+              className="btn btn-link fs-5 text-danger position-absolute top-0 start-0"
+              onClick={() => onAddToList(movieObj)}
+            >
+              <i className="bi bi-plus-circle"></i>
+            </button>
           </div>
         </div>
       )}

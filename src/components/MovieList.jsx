@@ -1,7 +1,6 @@
 import Movie from "./Movie";
-import { movie_list } from "../data";
 
-export default function MovieList({ movies }) {
+export default function MovieList({ movies, onAddToList }) {
   return (
     <div className="container my-3">
       <div className="card">
@@ -17,7 +16,7 @@ export default function MovieList({ movies }) {
               className="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4"
             >
               {movies.map((m, index) => (
-                <Movie key={index} movieObj={m} />
+                <Movie key={index} movieObj={m} onAddToList={onAddToList} />
               ))}
             </div>
           )}
