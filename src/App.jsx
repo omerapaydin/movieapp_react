@@ -1,14 +1,13 @@
-import "./App.css";
-import Header from "./components/Header";
-import MoviewList from "./components/MovieList";
+import Footer from "./components/Footer";
+import Header from "./Components/Header";
+import Main from "./components/Main";
 
-function App() {
+export default function App() {
   return (
     <>
       <Header />
-      <MoviewList />
+      <Main />
+      <Footer />
     </>
   );
 }
-
-export default App;

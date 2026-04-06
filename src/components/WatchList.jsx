@@ -1,12 +1,12 @@
 import Movie from "./Movie";
 import { movie_list } from "../data";
 
-export default function MovieList() {
+export default function WatchList() {
   return (
     <div className="container my-3">
       <div className="card">
         <div className="card-header">
-          <h2 className="title h5 mb-0">Movie List</h2>
+          <h2 className="title h5 mb-0">Watch List</h2>
         </div>
         <div className="card-body">
           {movie_list.filter((m) => m.is_active).length == 0 ? (

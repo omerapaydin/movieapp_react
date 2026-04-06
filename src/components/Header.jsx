@@ -1,3 +1,7 @@
+import Logo from "./Logo";
+import SearchForm from "./SearchForm";
+import WatchListButton from "./WatchListButton";
+
 export default function Header() {
   return (
     <div id="header">
@@ -6,9 +10,9 @@ export default function Header() {
         data-bs-theme="dark"
       >
         <div className="container">
-          <a href="#" className="navbar-brand">
-            Movie App
-          </a>
+          <Logo />
+          <SearchForm />
+          <WatchListButton />
         </div>
       </nav>
     </div>
