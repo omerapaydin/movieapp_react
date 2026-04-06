@@ -2,7 +2,7 @@ import Logo from "./Logo";
 import SearchForm from "./SearchForm";
 import WatchListButton from "./WatchListButton";
 
-export default function Header() {
+export default function Header({ watchListMovies, onSetsWatchListOpen }) {
   return (
     <div id="header">
       <nav
@@ -12,7 +12,10 @@ export default function Header() {
         <div className="container">
           <Logo />
           <SearchForm />
-          <WatchListButton />
+          <WatchListButton
+            movies={watchListMovies}
+            onSetsWatchListOpen={onSetsWatchListOpen}
+          />
         </div>
       </nav>
     </div>
