@@ -25,6 +25,10 @@ export default function App() {
     }
   }
 
+  function handleRemoveFromWatchList(movie) {
+    setWatchListMovies((movies) => movies.filter((m) => m.id !== movie.id));
+  }
+
   return (
     <>
       <Header>
@@ -37,7 +41,11 @@ export default function App() {
       </Header>
 
       <Main>
-        <WatchList movies={watchListMovies} isWatchListOpen={isWatchListOpen} />
+        <WatchList
+          movies={watchListMovies}
+          isWatchListOpen={isWatchListOpen}
+          onRemoveFromWatchList={handleRemoveFromWatchList}
+        />
         <MovieList movies={movies} onAddToList={handleAddToWatchList} />
       </Main>
       <Footer />
